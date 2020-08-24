@@ -11,7 +11,7 @@ function Product({ addToCart }) {
     },
     {
       Name: "Cricket Ball",
-      Price: "10$",
+      Price: "15$",
       InStock: true,
       Image:
         "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTQCcGciRBxCdzIPEiV17cTD4S_DgvoAfQiJA&usqp=CAU",
