@@ -51,3 +51,7 @@ header {
   height: 80px;
   padding-top: 5px;
 }
+
+.rightButton {
+  float: right;
+}
