@@ -55,3 +55,7 @@ header {
 .rightButton {
   float: right;
 }
+
+.leftButton {
+  float: left;
+}

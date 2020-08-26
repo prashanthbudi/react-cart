@@ -3,6 +3,7 @@ import "./App.css";
 import Product from "./product";
 import Cart from "./cart";
 import Login from "./login";
+import { useFetch } from "./customhooks/useFetch";
 
 const PAGE_PRODUCTS = "products";
 const PAGE_CART = "cart";
@@ -34,9 +35,17 @@ function App() {
     setUser();
   };
 
+  const [count, setCount] = useState(0);
+  const { data, loading } = useFetch(`http://numbersapi.com/${count}/trivia`);
+
   return (
     <div className="App">
       <header>
+        <div className="leftButton">
+          <button onClick={() => setCount((c) => c + 1)}>New Trivia</button>
+          <div>{!data ? "loading.." : data}</div>
+        </div>
+
         <button onClick={() => navigateTo(PAGE_PRODUCTS)}>View Products</button>
         <button onClick={() => navigateTo(PAGE_CART)}>
           Go to Cart ({cart.length})
